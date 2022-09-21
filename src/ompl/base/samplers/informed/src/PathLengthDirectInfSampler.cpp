@@ -206,7 +206,6 @@ namespace ompl
 
                 // Create a sampler for the uniformed subset:
                 uninformedSubSampler_ = uninformedSubSpace_->allocStateSampler();
-                
             }
 
             // Store the foci, first the starts:
