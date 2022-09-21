@@ -180,7 +180,7 @@ namespace ompl
             }
 
             // Create a sampler for the whole space that we can use if we have no information
-            baseSampler_ = InformedSampler::space_->allocDefaultStateSampler();
+            baseSampler_ = InformedSampler::space_->allocStateSampler();
 
             // Check if the space is compound
             if (!InformedSampler::space_->isCompound())
@@ -205,7 +205,8 @@ namespace ompl
                 uninformedSubSpace_ = InformedSampler::space_->as<CompoundStateSpace>()->getSubspace(uninformedIdx_);
 
                 // Create a sampler for the uniformed subset:
-                uninformedSubSampler_ = uninformedSubSpace_->allocDefaultStateSampler();
+                uninformedSubSampler_ = uninformedSubSpace_->allocStateSampler();
+                
             }
 
             // Store the foci, first the starts:
