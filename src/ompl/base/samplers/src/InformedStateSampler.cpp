@@ -148,7 +148,7 @@ namespace ompl
             infSampler_ = infSampler;
 
             // Allocate a base sampler
-            baseSampler_ = StateSampler::space_->allocDefaultStateSampler();
+            baseSampler_ = StateSampler::space_->allocStateSampler();
         }
 
         void InformedStateSampler::sampleUniform(State *statePtr)
